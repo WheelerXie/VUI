@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文宣物料电子平台</title>
+    <link type="text/css" rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="static/assets/styles/site.css" />
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <nav class="navbar navbar-inner" role="navigation">
+            <div class="navbar-header">
+                <span class="brand">文宣物料电子平台</span>
+            </div>
+            <p class="navbar-text pull-right" style="display: none;">
+                Logged in as <a href="javascript:void(0);" class="navbar-link">Username</a>
+            </p>
+            <div class="menu">
+                <a href="#bulletin.center">通知中心</a>
+            </div>
+            <div class="menu">
+                <a href="#task">我的任务</a>
+            </div>
+            <div class="menu group">
+                <span>订单管理</span>
+                <div>
+                    <a href="#order.list">订单查询</a>
+                    <a href="#order.modify">下单</a>
+                </div>
+            </div>
+            <div class="menu group">
+                <span>物料管理</span>
+                <div>
+                    <a href="#material.list">物料查询</a>
+                    <a href="#material.modify">新增物料</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid main" id="page_container">
+
+    </div>
+    <footer>
+        <span>
+            &copy; 2017 Powered By
+        </span>
+    </footer>
+
+    <script type="text/javascript" src="static/assets/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var util = {
+            isNumber: function (number) {
+                if (number) {
+                    return isNaN(Number(number)) == false;
+                }
+                return false;
+            },
+            getParamsUrl: function () {
+                var hashDeatail = location.hash.split("?"),
+                    hashName = hashDeatail[0].split("#")[1],
+                    params = hashDeatail[1] ? hashDeatail[1].split("&") : [],
+                    query = {};
+                for (var i = 0; i < params.length; i++) {
+                    var item = params[i].split("=");
+                    query[item[0]] = item[1]
+                }
+                return {
+                    path: hashName,
+                    query: query
+                }
+            }
+        };
+
+        function getSubMenusContainer(element) {
+            var menusContainer = $(element);
+            while (menusContainer.is('.menu.group') == false) {
+                menusContainer = menusContainer.parent();
+                if (menusContainer.is('body')) {
+                    return null;
+                    break;
+                }
+            }
+            if (menusContainer) {
+                return menusContainer.children('div');
+            }
+            return null;
+        }
+        $('.menu.group').hover(function (e) {
+            var subMenusContainer = getSubMenusContainer(e.target);
+            subMenusContainer.css('display', 'block');
+        }, function (e) {
+            var subMenusContainer = getSubMenusContainer(e.target);
+            subMenusContainer.css('display', 'none');
+        });
+        $('.menu.group a').click(function (e) {
+            $('.menu.group > div').css('display', 'none');
+        })
+    </script>
+    <script type="text/javascript" src="static/assets/scripts/common.js"></script>
+</body>
+</html>

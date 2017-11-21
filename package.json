@@ -1,0 +1,21 @@
+{
+  "name": "vui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WheelerXie/VUI.git"
+  },
+  "author": "Wheeler Xie",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/WheelerXie/VUI/issues"
+  },
+  "homepage": "https://github.com/WheelerXie/VUI#readme",
+  "dependencies": {
+  }
+}

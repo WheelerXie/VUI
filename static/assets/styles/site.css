@@ -1,0 +1,142 @@
+﻿html {
+  _overflow: hidden;
+}
+a, button {
+  white-space: nowrap!important;
+}
+body {
+  padding: 180px 0 60px;
+  _height: 100%;
+  overflow-y: scroll;
+  _overflow-y: scroll;
+  background-color: #F8F8F8;
+  /*EBEEF0*/
+}
+body > .navbar-fixed-top {
+  height: 180px;
+  background: url('../../img/timg.jpg') no-repeat 0 30px;
+  background-size: 100% 100%;
+  border: 0 none;
+}
+body > .navbar-fixed-top > nav {
+  background: #BBB url('../../img/logo_white.png') no-repeat 20px;
+  color: #FFF;
+  height: 60px;
+  border: 0 none;
+}
+body > .navbar-fixed-top > nav > * {
+  line-height: 60px;
+}
+body > .navbar-fixed-top > nav p,
+body > .navbar-fixed-top > nav span {
+  color: #FFFFFF !important;
+  text-shadow: none !important;
+  font-weight: 600 !important;
+}
+body > .navbar-fixed-top > nav .brand {
+  margin-left: 280px;
+  line-height: 40px;
+  white-space: nowrap;
+  cursor: default;
+}
+body > .container-fluid.main {
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  min-width: 800px;
+  max-width: 1300px;
+  border: 1px solid #CCC;
+  border-top: 0 none;
+}
+body > .container-fluid.main > div.brand {
+  margin: 0 -20px 10px;
+  border-bottom: 1px solid #CCC;
+}
+body > .container-fluid.main > div.brand h3 {
+  display: list-item;
+  padding: 20px 0 10px;
+  font-family: 'Microsoft YaHei UI';
+  font-size: 20px;
+  font-weight: 400;
+  text-indent: 6px;
+  line-height: 24px;
+  list-style-position: inside;
+  color: #666;
+}
+body > footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #CCC;
+  text-align: center;
+  background-color: #F8F8F8;
+}
+body > footer > * {
+  display: inline-block;
+  margin: 0 auto;
+  padding-right: 300px;
+  height: 60px;
+  line-height: 60px;
+  background: url('../../img/logo_red.png') no-repeat 140px;
+}
+.menu {
+  float: left;
+  margin: 0 5px;
+  min-width: 110px;
+  text-align: center;
+  cursor: pointer;
+}
+.menu a {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: none !important;
+  font-weight: 600;
+}
+.menu > div {
+  display: none;
+  background-color: #FFFFFF;
+  line-height: 40px;
+}
+.menu > div a {
+  padding: 0 10px;
+  color: #000000;
+  font-weight: 400;
+}
+.menu > div a:hover,
+.menu > div a.focus {
+  background-color: #0081C2;
+  color: #FFFFFF;
+}
+.row-fluid > div > * {
+  float: left;
+}
+.row-fluid > div > h5, .row-fluid > div > span {
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.row-fluid > div > h5 {
+  line-height: 10px;
+  padding-left: 0;
+  padding-right: 20px;
+}
+.row-fluid > div > button {
+  float: none;
+}
+.table th,
+.table td {
+  border: 1px solid #DDD;
+}
+.table th {
+  background-color: #EEE;
+}
+.table td a {
+  padding: 2px 4px;
+  border: 1px solid #2185D0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border: 1px solid #DDD;
+}
